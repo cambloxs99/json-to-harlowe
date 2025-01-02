@@ -1,0 +1,79 @@
+{
+(set: _users to (a:
+	(dm:
+		"id", 1,
+		"name", "Alice",
+		"roles", (a:
+			"admin",
+			"editor",
+			(a:
+				"a",
+				"b",
+				"c"
+			)
+			),
+		"settings",
+		(dm:
+			"theme", "dark",
+			"notifications",
+			(dm:
+				"email", True,
+				"sms", False,
+				"push",
+				(dm:
+					"enabled", True,
+					"frequency", "daily"))),
+		"projects", (a:
+			"projectId", "p123",
+			"name", "Project X",
+			"tasks", (a:
+				"taskId", "t1",
+				"title", "Design UI",
+				"completed", False,
+				"taskId", "t2",
+				"title", "Develop Backend",
+				"completed", True
+				),
+			"projectId", "p124",
+			"name", "Project Y",
+			"tasks", (a:
+			)
+			)),
+	(dm:
+		"id", 2,
+		"name", "Bob",
+		"roles", (a:
+			"viewer"
+			),
+		"settings",
+		(dm:
+			"theme", "light",
+			"notifications",
+			(dm:
+				"email", False,
+				"sms", True,
+				"push",
+				(dm:
+					"enabled", False,
+					"frequency", ""))),
+		"projects", (a:
+	))
+))
+(set: _metadata to (dm:
+	"generatedAt", "2024-12-30T12:00:00Z",
+	"totalUsers", 2,
+	"systemSettings",
+	(dm:
+		"allowSignup", True,
+		"maxProjectsPerUser", 5,
+		"features",
+		(dm:
+			"beta", (a:
+				"featureX",
+				"featureY"
+				),
+			"stable", (a:
+				"featureA",
+				"featureB"
+)))))
+}
