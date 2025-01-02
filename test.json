@@ -1,0 +1,66 @@
+{
+  
+    "users": [
+      {
+        "id": 1,
+        "name": "Alice",
+        "roles": ["admin", "editor", ["a", "b", "c"]],
+        "settings": {
+          "theme": "dark",
+          "notifications": {
+            "email": true,
+            "sms": false,
+            "push": {
+              "enabled": true,
+              "frequency": "daily"
+            }
+          }
+        },
+        "projects": [
+          {
+            "projectId": "p123",
+            "name": "Project X",
+            "tasks": [
+              {"taskId": "t1", "title": "Design UI", "completed": false},
+              {"taskId": "t2", "title": "Develop Backend", "completed": true}
+            ]
+          },
+          {
+            "projectId": "p124",
+            "name": "Project Y",
+            "tasks": []
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Bob",
+        "roles": ["viewer"],
+        "settings": {
+          "theme": "light",
+          "notifications": {
+            "email": false,
+            "sms": true,
+            "push": {
+              "enabled": false,
+              "frequency": null
+            }
+          }
+        },
+        "projects": []
+      }
+    ],
+    "metadata": {
+      "generatedAt": "2024-12-30T12:00:00Z",
+      "totalUsers": 2,
+      "systemSettings": {
+        "allowSignup": true,
+        "maxProjectsPerUser": 5,
+        "features": {
+          "beta": ["featureX", "featureY"],
+          "stable": ["featureA", "featureB"]
+        }
+      }
+    }
+  }
+  
