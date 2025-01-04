@@ -6,6 +6,7 @@ Arguments:<br>
 `input` - The `JSON` file to be converted<br>
 `output` - A `.txt/.tw` file to write into. (Warning: Inside contents will be replaced)<br>
 `vartype (optional)` - Either: "global" or "temp" variables (defaults to "temp")<br>
+`lowercase (optional)` - Add "lower" to convert all variables into lowercase<br>
 Example:
 ```bash
 python convert_json_to_harlowe.py input.json output.tw temp
